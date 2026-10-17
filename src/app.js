@@ -44,3 +44,10 @@ if (require.main === module) {
   );
 }
 module.exports = app;
+app.get('/api/info', (req, res) => {
+  res.status(200).json({
+    name: 'DevSecOps Demo',
+    version: version,
+    environment: environment,
+  });
+});
